@@ -1,0 +1,14 @@
+{
+  "name": "todoit-v1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "typescript": "3.1.1"
+  },
+  "scripts": {
+    "tsc": "tsc"
+  },
+  "author": "dSebastien <seb@dsebastien.net> (https://www.dsebastien.net)",
+  "license": "MIT"
+}
