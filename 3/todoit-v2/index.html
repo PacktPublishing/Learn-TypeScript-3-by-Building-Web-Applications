@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TodoIt</title>
+</head>
+<body id="todoIt" style="text-align: center">
+
+<h1>TodoIt</h1>
+
+<h2>Add new items</h2>
+
+<p>
+    What needs to be done?
+    <input type="text" id="todoInput" title="What should be added to the todo list?"
+       onkeyup="if(EventUtils.isEnter(event)) { todoIt.addTodo() }" onblur="todoIt.addTodo()" />
+    <input type="button" value="Add todo" onclick="todoIt.addTodo()" />
+</p>
+
+<h2>Current todo list</h2>
+
+<p>Filter: <input type="text" id="todoFilter" title="Filter for the todo list"
+    onkeyup="todoIt.filterTodoList()" onblur="todoIt.filterTodoList()" />
+</p>
+<div id="todoListContainer">Nothing to do, hurray!</div>
+
+<script type="text/javascript" src="todo-it.js"></script>
+
+</body>
+</html>

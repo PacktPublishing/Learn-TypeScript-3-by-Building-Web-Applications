@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MediaMan</title>
+    <link rel="stylesheet" type="text/css" href="mediaman.css">
+</head>
+<body id="mediaMan">
+
+<h1>MediaMan</h1>
+
+<h2>Book collections</h2>
+
+<div class="collectionContainerGroup">
+    <div class="containerGroup">
+        <div class="container">
+            <h3>New collection</h3>
+            <form id="newBookCollection" action="#">
+                <input id="newBookCollectionName" type="text" title="Name" placeholder="Name" required>
+                <input type="button" value="Create" onclick="mediaManController.createBookCollection();" />
+            </form>
+        </div>
+        <div class="container">
+            <h3>Tools</h3>
+            <form action="#">
+                <input type="button" value="Reload collections" onclick="mediaManController.reloadBookCollections();" />
+            </form>
+        </div>
+    </div>
+
+    <div id="bookCollections" class="containerGroup">
+    </div>
+</div>
+
+<hr>
+
+<h2>Movie collections</h2>
+
+Bonus exercise!
+
+<script src="./mediaman.ts"></script>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html, body {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+body {
+    height: 100%;
+}
+
+h1 {
+    text-align: center;
+    border: 5px solid black;
+    border-radius: 10px;
+    background-color: lightgray;
+}
+
+h2 {
+    background-color: wheat;
+    border: 3px solid gray;
+    border-radius: 10px;
+    margin-left: 10px;
+    padding-left: 10px;
+    margin-right: 50px;
+}
+
+.collectionContainerGroup {
+    display: flex; /* flexbox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.containerGroup {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 10px;
+}
+
+.container {
+    flex: 1;
+}
+
+.collection {
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    flex: 1;
+    margin: 10px;
+}
+
+.collection > h3 {
+    border-bottom: 1px solid black;
+    border-radius: 5px;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+.collectionTable {
+    border-collapse: collapse;
+    border-radius: 2px;
+    border-spacing: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.collectionTable > thead > tr > td {
+    background-color: gray;
+    text-align: center;
+    font-weight: bold;
+}
+
+.collectionTable td {
+    border: 1px solid black;
+}
+
+.collectionTable > tbody > tr:nth-child(even) {
+    background-color: #eee;
+}
+
+.collectionTable > tbody > tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+.collectionTable > tbody {
+    text-align: center;
+}
+
+.mediaImage {
+    max-height: 120px;
+}
+
+form li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+form ul li {
+    display: block;
+    margin-bottom: 10px;
+    min-height: 35px;
+}
+
+form input {
+    line-height: 16px;
+    padding: 8px;
+    border: 1px solid #b0cfe0;
+    transition: all .30s;
+    box-sizing: border-box;
+}
+
+form select {
+    border: 1px solid #b0cfe0;
+    line-height: 16px;
+    padding: 8px;
+    transition: all .30s;
+}
+
+form textarea {
+    border: 1px solid #b0cfe0;
+    line-height: 16px;
+    padding: 8px;
+    transition: all .30s;
+    display: block;
+    box-sizing: border-box;
+    width: 90%;
+}
+
+.collection form input[type="button"] {
+    display: flex;
+    margin-left: auto;
+    justify-content: flex-end;
+    margin-right: 10%;
+    width: auto;
+}
+
+.collection form input {
+    width: 45%;
+}
+
+.collectionToolsContainer {
+    flex: 1;
+}
+
+.collectionToolsContainer form input[type="button"] {
+    justify-content: inherit;
+    margin-right: inherit;
+    margin-left: inherit;
+    margin-bottom: 10px;
+}

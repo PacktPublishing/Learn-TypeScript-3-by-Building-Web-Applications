@@ -1,0 +1,21 @@
+{
+  "name": "mediaman",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "cross-env": "5.2.0",
+    "parcel-bundler": "1.10.3",
+    "typescript": "3.1.1"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "build": "cross-env NODE_ENV=production parcel build index.html --public-url .",
+    "watch": "parcel watch index.html",
+    "serve": "npm start",
+    "start": "parcel serve --open --port 3000 index.html"
+  },
+  "author": "dSebastien <seb@dsebastien.net> (https://www.dsebastien.net)",
+  "license": "MIT",
+  "dependencies": {}
+}
