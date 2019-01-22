@@ -1,0 +1,35 @@
+{
+  "name": "worldexplorer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "cross-env": "5.2.0",
+    "cross-fetch": "^2.2.3",
+    "jest-fetch-mock": "^2.1.0",
+    "parcel-bundler": "1.10.3",
+    "typescript": "3.1.1"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "prebuild": "npm run test",
+    "build": "cross-env NODE_ENV=production parcel build src/index.html --public-url dist",
+    "watch": "parcel watch src/index.html",
+    "serve": "npm start",
+    "start": "parcel serve --open --port 3000 src/index.html",
+    "test": "jest"
+  },
+  "author": "dSebastien <seb@dsebastien.net> (https://www.dsebastien.net)",
+  "license": "MIT",
+  "dependencies": {
+    "@types/chart.js": "2.7.40",
+    "@types/jest": "^23.3.9",
+    "chart.js": "2.7.3",
+    "io-ts": "1.4.2",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.5"
+  },
+  "alias": {
+    "services": "./src/services"
+  }
+}

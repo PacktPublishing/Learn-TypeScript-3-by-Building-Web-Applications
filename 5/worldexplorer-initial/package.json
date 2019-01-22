@@ -1,0 +1,23 @@
+{
+  "name": "worldexplorer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "cross-env": "5.2.0",
+    "parcel-bundler": "1.10.3",
+    "typescript": "3.1.1"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "build": "cross-env NODE_ENV=production parcel build src/index.html --public-url dist",
+    "watch": "parcel watch src/index.html",
+    "serve": "npm start",
+    "start": "parcel serve --open --port 3000 src/index.html"
+  },
+  "author": "dSebastien <seb@dsebastien.net> (https://www.dsebastien.net)",
+  "license": "MIT",
+  "dependencies": {
+    "io-ts": "1.4.2"
+  }
+}
