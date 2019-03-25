@@ -1,0 +1,35 @@
+<h3>New book</h3>
+
+<form [formGroup]="formGroup" novalidate>
+
+  <section fxLayoutGap="10px">
+    <mat-form-field fxFlex>
+      <input matInput formControlName="name" type="text" placeholder="Name" required />
+    </mat-form-field>
+    <mat-form-field fxFlex>
+      <input matInput formControlName="author" type="text" placeholder="Author" required />
+    </mat-form-field>
+  </section>
+  <section fxLayoutGap="10px">
+    <mat-form-field fxFlex>
+      <mat-select placeholder="Genre" formControlName="genre" required>
+        <mat-option *ngFor="let genre of genres" [value]="genre">{{ genre }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field fxFlex>
+      <input matInput formControlName="numberOfPages" type="number" placeholder="Pages" required />
+    </mat-form-field>
+  </section>
+  <section fxLayoutGap="10px">
+    <mat-form-field fxFlex>
+      <input matInput formControlName="pictureLocation" type="url" title="Picture" placeholder="Picture URL" />
+    </mat-form-field>
+  </section>
+  <section>
+    <mat-form-field fxFlex>
+      <textarea matInput formControlName="description" placeholder="Description"></textarea>
+    </mat-form-field>
+  </section>
+
+  <button mat-raised-button color="primary" type="button" (click)="createBook()">Create</button>
+</form>

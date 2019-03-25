@@ -1,0 +1,36 @@
+<mat-toolbar color="warn">Book collections</mat-toolbar>
+<mat-card fxLayoutGap="20px">
+  <section fxFlex>
+    <h2>New collection</h2>
+    <form action="#" fxLayoutGap="10px">
+      <mat-form-field>
+        <input matInput type="text" [formControl]="formControl" title="Name" placeholder="Name" required/>
+        <mat-error *ngIf="formControl.invalid && (formControl.dirty || formControl.touched)"
+                   class="alert alert-danger">
+          <span *ngIf="formControl.hasError('required')">The name is required.</span>
+        </mat-error>
+      </mat-form-field>
+      <button mat-button mat-raised-button color="accent" type="submit" (click)="createBookCollection()">Create</button>
+    </form>
+  </section>
+
+  <section fxFlex>
+    <h2>Tools</h2>
+    <button mat-raised-button color="primary" type="button" (click)="reloadBookCollections()">Reload collections</button>
+  </section>
+</mat-card>
+
+<mat-card *ngFor="let bookCollection of bookCollections | keyvalue; trackBy:trackById">
+  <h3 mat-card-title>{{ bookCollection.value.name }}</h3>
+  <mat-card fxLayout="row" fxLayoutGap="20px">
+    <app-book-new fxFlex (created)="createBook($event, bookCollection.key)"></app-book-new>
+    <div fxFlex>
+      <h3>Tools</h3>
+      <button mat-raised-button (click)="removeBookCollection(bookCollection.key)">Remove collection</button>
+    </div>
+  </mat-card>
+  <mat-card fxLayout="row">
+    <app-book-list fxFlex (removedBook)="removeBook(bookCollection.key, $event)"
+                   [books]="bookCollection.value.collection"></app-book-list>
+  </mat-card>
+</mat-card>

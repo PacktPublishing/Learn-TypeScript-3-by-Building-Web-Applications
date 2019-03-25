@@ -1,0 +1,15 @@
+{
+  "name": "decorators-examples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "3.1.1"
+  },
+  "scripts": {
+    "tsc": "npx tsc"
+  },
+  "author": "dSebastien <seb@dsebastien.net> (https://www.dsebastien.net)",
+  "license": "MIT"
+}

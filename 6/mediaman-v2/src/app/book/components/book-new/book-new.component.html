@@ -1,0 +1,24 @@
+<h3>New book</h3>
+
+<form [formGroup]="formGroup" novalidate>
+  <ul>
+    <li>
+      <input formControlName="name" type="text" placeholder="Name" required/>
+      <input formControlName="author" type="text" placeholder="Author" required/>
+    </li>
+    <li>
+      <select formControlName="genre" required>
+        <option *ngFor="let genre of genres" [value]="genre">{{ genre }}</option>
+      </select>
+      <input formControlName="numberOfPages" type="number" placeholder="Pages" required>
+    </li>
+    <li>
+      <input formControlName="pictureLocation" type="url" title="Picture" placeholder="Picture URL">
+    </li>
+    <li>
+      <textarea formControlName="description" placeholder="Description"></textarea>
+    </li>
+  </ul>
+
+  <button type="button" (click)="createBook()">Create</button>
+</form>
