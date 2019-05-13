@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue filter</title>
+
+    <!-- development version of Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+    {{ message | reverse }}
+</div>
+
+<script type="text/javascript">
+    let app = new Vue({
+        el: '#app',
+        data: {
+            message: "Hello world!"
+        },
+        filters: {
+            reverse: (value) =>
+                value.split('').reduce((reversedString, char) => char + reversedString, '')
+        }
+    });
+</script>
+
+</body>
+</html>

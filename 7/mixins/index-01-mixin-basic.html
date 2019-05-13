@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic mixin</title>
+
+    <!-- development version of Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <span>Message: {{ message }}</span>
+    <br>
+    <span>Mixin data: {{ mixinMessage }}</span>
+    <div>
+        <span>Button state: {{ isEnabled }}</span>
+        <br>
+        <input type="button" @click="toggle" value="Toggle">
+    </div>
+</div>
+
+<script type="text/javascript">
+    "use strict";
+
+    const loggingMixin = {
+        created() {
+            console.log("I'm the logging mixin");
+        }
+    };
+
+    const dataStorageMixin = {
+        data() {
+            return {
+                mixinMessage: "I'm the data storage mixin",
+            };
+        },
+    };
+
+    const toggleMixin = {
+        data() {
+            return {
+                isEnabled: false,
+            };
+        },
+        methods: {
+            toggle() {
+                this.isEnabled = !this.isEnabled;
+            },
+        },
+    };
+
+    Vue.mixin({
+        created() {
+            console.log("I'm a global mixin");
+        }
+    });
+
+    let app = new Vue({
+        el: '#app',
+        data() {
+          return {
+              message: "I'm the component"
+          };
+        },
+        mixins: [
+            loggingMixin,
+            dataStorageMixin,
+            toggleMixin,
+        ],
+    });
+</script>
+
+</body>
+</html>

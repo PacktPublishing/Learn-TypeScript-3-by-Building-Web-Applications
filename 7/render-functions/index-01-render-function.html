@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Render function</title>
+
+    <!-- development version of Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <custom-heading v-bind:level="3">{{message}}</custom-heading>
+</div>
+
+<script type="text/javascript">
+    "use strict";
+    Vue.component('custom-heading', {
+        render: function (createElement) {
+            return createElement(
+                'h' + this.level,    // the first parameter is the name of the tag to create
+                this.$slots.default, // the children
+            )
+        },
+        props: {
+            level: {
+                type: Number,
+                required: true,
+            }
+        }
+    });
+
+    let app = new Vue({
+        el: '#app',
+        data() {
+            return {
+                message: "I'm the component"
+            };
+        },
+    });
+</script>
+
+</body>
+</html>

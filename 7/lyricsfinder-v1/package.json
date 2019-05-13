@@ -1,0 +1,43 @@
+{
+  "name": "lyricsfinder",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "test": "npm run test:unit",
+    "e2e": "npm run test:e2e",
+    "test:e2e": "vue-cli-service test:e2e",
+    "test:unit": "vue-cli-service test:unit"
+  },
+  "dependencies": {
+    "axios": "0.18.0",
+    "element-ui": "2.8.2",
+    "inversify": "5.0.1",
+    "inversify-inject-decorators": "3.1.0",
+    "io-ts": "^1.8.5",
+    "reflect-metadata": "0.1.13",
+    "rxjs": "6.4.0",
+    "vue": "2.6.10",
+    "vue-class-component": "7.0.2",
+    "vue-property-decorator": "8.1.0",
+    "vue-router": "3.0.6"
+  },
+  "devDependencies": {
+    "@types/jest": "24.0.11",
+    "@vue/cli-plugin-babel": "3.6.0",
+    "@vue/cli-plugin-e2e-cypress": "3.6.0",
+    "@vue/cli-plugin-typescript": "3.6.0",
+    "@vue/cli-plugin-unit-jest": "3.6.3",
+    "@vue/cli-service": "3.6.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "axios-mock-adapter": "1.16.0",
+    "babel-core": "7.0.0-bridge.0",
+    "ts-jest": "24.0.2",
+    "typescript": "3.4.4",
+    "vue-template-compiler": "2.6.10",
+    "vue-template-loader": "1.0.0",
+    "webpack-stream": "5.2.1"
+  }
+}

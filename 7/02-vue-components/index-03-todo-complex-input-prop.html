@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Todo task complex input</title>
+
+    <!-- development version of Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <ul>
+        <todo-task v-for="todo of todos" :key="todo.id" v-bind:todo="todo"></todo-task>
+      </ul>
+    </div>
+
+    <script type="text/javascript">
+      Vue.component("todo-task", {
+        props: ["todo"],
+        template: '<li class="todoTask">{{todo.description}}</li>'
+      });
+
+      let app = new Vue({
+        el: "#app",
+        data: {
+          todos: [
+            { id: 1, description: "Learn about React" },
+            { id: 2, description: "Follow @dSebastien on Twitter" },
+            { id: 3, description: "Conquer the world" }
+          ]
+        }
+      });
+    </script>
+  </body>
+</html>

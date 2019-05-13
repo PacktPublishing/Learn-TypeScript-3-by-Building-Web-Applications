@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A story of two Vue apps!</title>
+
+    <!-- development version of Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+    {{ message }}
+</div>
+
+<div id="otherApp">
+    {{ otherMessage }}
+</div>
+
+<script type="text/javascript">
+    const app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello world!'
+        }
+    });
+
+    const otherApp = new Vue({
+        el: '#otherApp',
+        data: {
+            otherMessage: 'Foobar'
+        }
+    })
+</script>
+
+</body>
+</html>

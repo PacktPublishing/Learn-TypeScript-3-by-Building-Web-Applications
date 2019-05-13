@@ -1,0 +1,19 @@
+/*
+  This file contains styles that are applied globally.
+  Some rules are there as workarounds for known issues and were placed here to limit the overhead in the book
+ */
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* https://stackoverflow.com/questions/52050877/element-ui-font-family-differencies-between-components */
+button,
+input,
+select,
+textarea {
+  font-family: inherit !important;
+  font-size: inherit !important;;
+  line-height: inherit !important;;
+  color: inherit !important;;
+}
