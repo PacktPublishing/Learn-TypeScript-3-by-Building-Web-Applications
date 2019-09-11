@@ -22,7 +22,7 @@ import {Song} from '@/domain';
 import {PropType} from 'vue/types/options';
 
 @Component({})
-export default class Search extends Vue {
+export default class SongsList extends Vue {
   @Prop({
     required: true,
   })
