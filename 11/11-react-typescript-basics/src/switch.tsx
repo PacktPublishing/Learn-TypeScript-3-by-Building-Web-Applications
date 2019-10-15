@@ -24,6 +24,5 @@ export class Switch extends Component<Props, State> {
         this.setState((state: State, _: Props) => {
             return {currentSwitchStatus: !state.currentSwitchStatus};
         });
-        this.setState({currentSwitchStatus: !this.state.currentSwitchStatus});
     }
 }
