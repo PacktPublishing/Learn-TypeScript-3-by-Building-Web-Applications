@@ -11,7 +11,8 @@
     "outDir": "./dist",
     "baseUrl": "./",
     "incremental": true,
-    "lib": ["es6", "dom", "esnext.asynciterable"]
+    "lib": ["es6", "dom", "esnext.asynciterable"],
+    "skipLibCheck": true
   },
   "exclude": ["node_modules"]
 }

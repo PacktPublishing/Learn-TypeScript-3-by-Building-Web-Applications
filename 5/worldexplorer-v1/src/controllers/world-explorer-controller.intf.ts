@@ -1,5 +1,5 @@
 export interface WorldExplorerController {
-    loadCountries(): void;
-    loadYears(): void;
-    renderChart(): void;
+  loadCountries(): Promise<void>;
+  loadYears(): void;
+  renderChart(): void;
 }
