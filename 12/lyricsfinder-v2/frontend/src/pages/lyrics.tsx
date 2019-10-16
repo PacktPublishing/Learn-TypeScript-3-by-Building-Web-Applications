@@ -1,9 +1,9 @@
 import React from 'react';
-import {RouteComponentProps} from 'react-router';
+import { RouteComponentProps } from 'react-router';
 import Container from 'react-bootstrap/Container';
-import {Link} from 'react-router-dom';
-import {FindLyrics_songLyrics} from '../generated/FindLyrics';
-import {FindSongs_songs} from '../generated/FindSongs';
+import { Link } from 'react-router-dom';
+import { FindLyrics_songLyrics } from '../generated/FindLyrics';
+import { FindSongs_songs } from '../generated/FindSongs';
 import Card from 'react-bootstrap/Card';
 
 type LyricsLocationState = {
@@ -18,9 +18,9 @@ export const Lyrics = (props: LyricsProps) => {
     const songLyrics = props.location.state.songLyrics;
     const song = props.location.state.song;
     return (
-        <Container className={'lf-lyrics'}>
+        <Container className='lf-lyrics'>
             <Card>
-                <Card.Header>{song.name} (<Link to={'/'} title={'Go back'}>Go back</Link>)</Card.Header>
+                <Card.Header>{song.name} (<Link to='/' title='Go back'>Go back</Link>)</Card.Header>
                 <Card.Body>
                     <Card.Text>
                         <span dangerouslySetInnerHTML={{__html: songLyrics.lyrics}}/>

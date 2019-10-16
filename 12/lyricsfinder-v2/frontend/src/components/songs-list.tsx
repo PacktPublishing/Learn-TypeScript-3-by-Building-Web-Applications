@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 
 import Container from 'react-bootstrap/Container';
-import {FindSongs_songs} from '../generated/FindSongs';
+import { FindSongs_songs } from '../generated/FindSongs';
 import ListGroup from 'react-bootstrap/ListGroup';
 
 type Props = {

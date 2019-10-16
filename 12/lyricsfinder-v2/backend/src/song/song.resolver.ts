@@ -3,7 +3,7 @@ import { MusicService } from '../musixmatch/services';
 import { Inject } from '@nestjs/common';
 import { TYPES } from '../musixmatch/ioc/types';
 import { SongDto } from './song.dto';
-import {Observable} from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Resolver('Song')
 export class SongResolver {
