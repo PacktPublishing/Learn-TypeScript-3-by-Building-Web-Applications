@@ -29,15 +29,9 @@ export const Search = (props: Props) => {
     };
 
     const handleSearchTextInputChange = (event: FormEvent<FormControlProps>): void => {
-        const searchInputNewValue: string | undefined = event.currentTarget.value;
-
-        if(searchInputNewValue) {
-            updateSearchText(searchInputNewValue);
-            console.log(`Search: search text changed to [${searchInputNewValue}]`);
-        } else {
-            updateSearchText('');
-            props.searchCleared();
-        }
+        const searchInputNewValue: string = event.currentTarget.value || '';
+        updateSearchText(searchInputNewValue);
+        console.log(`Search: search text changed to [${searchInputNewValue}]`);
     };
 
     return (
