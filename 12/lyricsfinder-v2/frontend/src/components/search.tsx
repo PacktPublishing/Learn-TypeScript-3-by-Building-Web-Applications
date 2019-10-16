@@ -20,7 +20,11 @@ export const Search = (props: Props) => {
 
     const searchHandler: VoidFunction = () => {
         console.log('Search: search handler called. Search text: ', searchText);
-        props.searchTriggered(searchText);
+        if (searchText === '') {
+            clearHandler();
+        } else {
+            props.searchTriggered(searchText);
+        }
     };
 
     const clearHandler = () => {
