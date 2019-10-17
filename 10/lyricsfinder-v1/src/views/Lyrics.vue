@@ -3,8 +3,10 @@
     <span>{{song.name}}</span>
     <el-divider></el-divider>
 
-    <el-container class="lf-lyrics-view-lyrics">
-      <span v-html="songLyrics.lyrics"></span>
+    <el-container class="lf-lyrics-view-lyrics" direction="vertical">
+      <span v-for="lyricsLine in songLyricsLines">
+        <span>{{lyricsLine}}<br /><br /></span>
+      </span>
     </el-container>
     <router-link to="/"><i class="el-icon-back"></i></router-link>
 
@@ -25,6 +27,8 @@ export default class Lyrics extends Vue {
   })
   private songLyrics!: SongLyrics;
 
+  private songLyricsLines: string[] = [];
+
   @Prop({
     required: true,
     type: Song,
@@ -33,6 +37,10 @@ export default class Lyrics extends Vue {
 
   public mounted() {
     console.log('Lyrics component mounted');
+
+    if (this.songLyrics.lyrics) {
+      this.songLyricsLines = this.songLyrics.lyrics.split('\n');
+    }
   }
 }
 </script>
