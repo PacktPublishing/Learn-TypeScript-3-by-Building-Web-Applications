@@ -175,7 +175,7 @@ export class MusicServiceImpl implements MusicService {
     );
   }
 
-  findLyrics(songId: number): Observable<SongLyrics> {
+  findLyrics(songId: string): Observable<SongLyrics> {
     if (!songId) {
       throw new Error('A song id must be provided to fetch its lyrics');
     }

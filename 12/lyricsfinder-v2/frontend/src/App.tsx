@@ -3,9 +3,9 @@ import './App.css';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Button from 'react-bootstrap/Button';
 
-import {BrowserRouter, Route} from 'react-router-dom';
-import {Home} from './pages/home';
-import {Lyrics} from './pages/lyrics';
+import { BrowserRouter, Route } from 'react-router-dom';
+import { Home } from './pages/home';
+import { Lyrics } from './pages/lyrics';
 import Container from 'react-bootstrap/Container';
 
 const App: React.FC = () => {

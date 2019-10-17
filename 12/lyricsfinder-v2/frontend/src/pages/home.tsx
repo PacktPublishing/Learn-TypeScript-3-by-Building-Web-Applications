@@ -1,16 +1,16 @@
-import React, {useState} from 'react';
-import ApolloClient, {ApolloQueryResult} from 'apollo-boost';
-import {Search} from '../components/search';
+import React, { useState } from 'react';
+import ApolloClient, { ApolloQueryResult } from 'apollo-boost';
+import { Search } from '../components/search';
 import Container from 'react-bootstrap/Container';
-import {FindArtists, FindArtists_artists, FindArtistsVariables} from '../generated/FindArtists';
-import {FindArtistsQuery, FindLyricsQuery, FindSongsQuery} from '../graphql/queries';
-import {FindSongs, FindSongs_songs, FindSongsVariables} from '../generated/FindSongs';
-import {SongsList} from '../components/songs-list';
+import { FindArtists, FindArtists_artists, FindArtistsVariables } from '../generated/FindArtists';
+import { FindArtistsQuery, FindLyricsQuery, FindSongsQuery } from '../graphql/queries';
+import { FindSongs, FindSongs_songs, FindSongsVariables } from '../generated/FindSongs';
+import { SongsList } from '../components/songs-list';
 import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import Spinner from 'react-bootstrap/Spinner';
-import {FindLyrics, FindLyricsVariables} from '../generated/FindLyrics';
-import {RouteComponentProps} from 'react-router';
+import { FindLyrics, FindLyricsVariables } from '../generated/FindLyrics';
+import { RouteComponentProps } from 'react-router';
 
 const apolloClient = new ApolloClient({
     uri: 'http://localhost:4000/graphql'
@@ -74,35 +74,35 @@ export const Home = (props: RouteComponentProps) => {
     const foundArtistsList = foundArtists.map(item => <li key={item.id}>{item.name}</li>);
 
     return (
-        <Container className={'lf-home'}>
+        <Container className='lf-home'>
             <Search searchCleared={searchInputCleared} searchTriggered={search}/>
 
             <Accordion>
                 <Card>
-                    <Accordion.Toggle as={Card.Header} variant="link" eventKey="0">
+                    <Accordion.Toggle as={Card.Header} variant='link' eventKey='0'>
                         <h3>Artists</h3>
                         { artistsLoading &&
-                            <Spinner animation="border" role="status">
-                                <span className="sr-only">Loading...</span>
+                            <Spinner animation='border' role='status'>
+                                <span className='sr-only'>Loading...</span>
                             </Spinner>
                         }
                     </Accordion.Toggle>
-                    <Accordion.Collapse eventKey="0">
+                    <Accordion.Collapse eventKey='0'>
                         <Card.Body>
                             <ul>
                                 {foundArtistsList}
                             </ul>
                         </Card.Body>
                     </Accordion.Collapse>
-                    <Accordion.Toggle as={Card.Header} variant="link" eventKey="1">
+                    <Accordion.Toggle as={Card.Header} variant='link' eventKey='1'>
                         <h3>Songs</h3>
                         { songsLoading ? (
-                            <Spinner animation="border" role="status">
-                                <span className="sr-only">Loading...</span>
+                            <Spinner animation='border' role='status'>
+                                <span className='sr-only'>Loading...</span>
                             </Spinner>
                         ) : null}
                     </Accordion.Toggle>
-                    <Accordion.Collapse eventKey="1">
+                    <Accordion.Collapse eventKey='1'>
                         <Card.Body>
                             <SongsList songs={foundSongs} songSelected={songSelected}/>
                         </Card.Body>
