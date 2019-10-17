@@ -14,8 +14,6 @@ export class SongLyrics {
     } else {
       this._lyrics = _lyrics;
     }
-
-    this._lyrics = this._lyrics.replace(/\n/g, '<br />');
   }
 
   get id(): string {
