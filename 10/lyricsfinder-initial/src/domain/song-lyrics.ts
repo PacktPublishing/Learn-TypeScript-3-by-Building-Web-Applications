@@ -13,7 +13,7 @@ export class SongLyrics {
       throw new Error('Invalid song lyrics');
     }
 
-    this._lyrics = _lyrics.replace(/\n/g, '<br />');
+    this._lyrics = _lyrics;
   }
 
   get id(): string {
