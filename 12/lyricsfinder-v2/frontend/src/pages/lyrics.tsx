@@ -36,7 +36,7 @@ export const Lyrics = (props: LyricsProps) => {
                 <Card.Header>{song.name} (<Link to='/' title='Go back'>Go back</Link>)</Card.Header>
                 <Card.Body>
                     <Card.Text>
-            <span>{songLyricsLines}</span>
+                      <span>{songLyricsLines}</span>
                     </Card.Text>
                     <h4>Copyright:</h4>
                     <span>{songLyrics.copyright}</span>
