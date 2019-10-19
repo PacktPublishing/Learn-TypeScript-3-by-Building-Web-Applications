@@ -4,7 +4,7 @@ class NaiveMap<Key, Value> {
 
     constructor(){}
 
-    contains(key: Key) {
+    contains(key: Key): boolean {
         const result = this._keys.indexOf(key);
         return result !== -1;
     }
