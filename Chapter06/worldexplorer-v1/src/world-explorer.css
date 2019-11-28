@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html, body {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+body {
+    height: 100%;
+}
+
+#worldExplorer {
+
+}
+
+#worldExplorerChartContainer {
+    max-width: 75%;
+}
+
+#worldExplorerChart {
+    border: 1px solid black;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WorldExplorer</title>
+	<link rel="stylesheet" type="text/css" href="world-explorer.css">
+</head>
+<body id="worldExplorer">
+
+<h1>WorldExplorer</h1>
+
+<form id="chartConfigurationForm" target="#">
+    <select id="countrySelect" required>
+        <option value="">Loading...</option>
+    </select>
+    <select id="indicatorSelect" required>
+        <option value="TOTAL_POPULATION">Total population</option>
+        <option value="TOTAL_MALE_POPULATION">Male population</option>
+        <option value="TOTAL_FEMALE_POPULATION">Female population</option>
+        <option value="ADULT_MALE_LITERACY">Adult male literacy</option>
+        <option value="ADULT_FEMALE_LITERACY">Adult female literacy</option>
+        <option value="LIFE_EXPECTANCY">Life expectancy</option>
+        <option value="ADULT_MALE_SURVIVAL_TO_65">Adult male survival to age 65</option>
+        <option value="ADULT_FEMALE_SURVIVAL_TO_65">Adult female survival to age 65</option>
+    </select>
+    <select id="fromYearSelect" required>
+        <option value="">Loading...</option>
+    </select>
+    <select id="toYearSelect" required>
+        <option value="">Loading...</option>
+    </select>
+    <select id="chartTypeSelect" required>
+        <option value="line">Line</option>
+        <option value="bar">Bar</option>
+        <option value="horizontalBar">Horizontal Bar</option>
+        <option value="polarArea">Polar Area</option>
+        <option value="radar">Radar</option>
+    </select>
+    <input type="button" value="Show" onclick="worldExplorerController.renderChart();" />
+</form>
+<br />
+<div id="worldExplorerChartContainer">
+    <canvas id="worldExplorerChart"></canvas>
+</div>
+
+<script src="world-explorer.ts"></script>
+
+</body>
+</html>
