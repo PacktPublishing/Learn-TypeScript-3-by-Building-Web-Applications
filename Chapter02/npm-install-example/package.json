@@ -8,7 +8,7 @@
   },
   "author": "dSebastien <seb@dsebastien.net> (https://www.dsebastien.net)",
   "dependencies": {
-    "lodash": "4.17.11"
+    "lodash": "4.17.19"
   },
   "devDependencies": {
     "karma": "3.0.0"
