@@ -1,8 +1,3 @@
-## $5 Tech Unlocked 2021!
-[Buy and download this Book for only $5 on PacktPub.com](https://www.packtpub.com/product/learn-typescript-3-by-building-web-applications/9781789615869)
------
-*If you have read this book, please leave a review on [Amazon.com](https://www.amazon.com/gp/product/1789615860).     Potential readers can then use your unbiased opinion to help them make purchase decisions. Thank you. The $5 campaign         runs from __December 15th 2020__ to __January 13th 2021.__*
-
 # Typescript 3.0 Projects 
 
 <a href="https://www.packtpub.com/programming/typescript-3-0-projects?utm_source=github&utm_medium=repository&utm_campaign=9781789615869"><img src="https://www.packtpub.com/media/catalog/product/cache/e4d64343b1bc593f1c5348fe05efa4a6/9/7/9781789615869-original.png" alt="Typescript 3.0 Projects " height="256px" align="right"></a>
