@@ -11,6 +11,6 @@
     "lodash": "4.17.11"
   },
   "devDependencies": {
-    "karma": "3.0.0"
+    "karma": "6.4.1"
   }
 }
